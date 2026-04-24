@@ -35,6 +35,7 @@
         <select id="type">
             <option value="ibf_heat">IBF – Heat Wave</option>
             <option value="ibf_rain">IBF – Heavy Rainfall</option>
+            <option value="tshli_gusty">TshLi & Gusty</option>
              <option value="vaf">VAF AP</option>
             <option value="state">State_AAB_Composite AP Bulletin</option>
         </select>
@@ -117,7 +118,15 @@ Kindly find attached the Impact based forecast (IBF) for Heavy rainfall warning 
 
 Based on this IBF, an Advisory may be issued to Farmers and a copy (in word format) may be sent to this office.`;
 
-        } else if (type === 'state') {
+        } else if (type === 'TshLi&Gusty') {
+
+    subject = `Impact based forecast (IBF) for Heat Wave & Thunderstorm, lightning, gusty winds (40-50 kmph) Warning issued on ${dateDash}`;
+
+    body = `Kindly find attached the Impact based forecast (IBF) for Heat Wave & Thunderstorm, lightning, gusty winds (40-50 kmph) warning for Agriculture for the districts of Andhra Pradesh based on the forecast issued on ${dateDash}.
+
+Based on this IBF, an Advisory may be issued to Farmers and a copy (in word format) may be sent to this office.`;
+
+}else if (type === 'state') {
 
             const bulletinNo = document.getElementById('bulletinNo').value;
             if (!bulletinNo) return alert("Enter Bulletin Number");
