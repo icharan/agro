@@ -112,7 +112,8 @@
       <select id="thunderstormIntensity" required>
         <option value="">Select...</option>
         <option value="Heat wave conditions">Heat wave</option> 
-        <option value="Severe Heat wave conditions">Severe Heat wave</option>         
+        <option value="Severe Heat wave conditions">Severe Heat wave</option>  
+        <option value="Thunderstorm accompanied with lightening & Gusty winds with speed 40-50kmph">TSH with LI and Gusty winds</option> 
       </select>
     </div>
 
@@ -121,6 +122,7 @@
       <select id="lightningLikelihood" required>
         <option value="isolated">isolated</option>
         <option value="a few">a few</option>
+        <option value="one or two">one or two</option>
       </select>
     </div>
 
@@ -198,6 +200,7 @@
   const teluguIntensity = {
     "Heat wave conditions": "వడగాలులు",
     "Severe Heat wave conditions": "తీవ్ర వడగాలుల ",
+    "Thunderstorm accompanied with lightening & Gusty winds with speed 40-50kmph":"ఉరుములతో కూడిన మెరుపులు", 
     }[thunderstormIntensity] || "";
 
   const teluguLightning = {
