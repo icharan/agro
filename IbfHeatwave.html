@@ -127,6 +127,15 @@
     </div>
 
     <div class="form-group">
+      <label for="Speed">Speed</label>
+      <select id="Speed" required>
+        <option value="40-50 Kmph">40-50 Kmph</option>
+        <option value="50-60 Kmph">50-60 Kmph</option>
+        <option value="one or two">one or two</option>
+      </select>
+    </div>
+
+    <div class="form-group">
       <button type="button" onclick="generateFirstAlert()">Generate Message</button>
     </div>
   </form>
@@ -177,6 +186,7 @@
   const selectedDistricts = Array.from(document.querySelectorAll('input[name="district"]:checked')).map(el => el.value);
   const thunderstormIntensity = document.getElementById('thunderstormIntensity').value;
   const lightningLikelihood = document.getElementById('lightningLikelihood').value;
+  const Speed = document.getElementById('Speed').value;
 
   if (selectedDistricts.length === 0) {
     alert("Please select at least one district.");
